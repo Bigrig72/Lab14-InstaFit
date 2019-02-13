@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace InstaFit.Models
 {
-    public class Fitness
+    public class FitnessPost
     {
         public int ID { get; set; }
         public string Description { get; set; }

@@ -10,10 +10,10 @@ namespace InstaFit.Models.Interfaces
         // Delete the post
         Task DeleteAsync(int id);
         // Search or Find
-        Task<Fitness> FindFitnessPost(int id);
+        Task<FitnessPost> FindFitnessPost(int id);
         // Get all posts
-        Task<List<Fitness>> GetFitnessPosts();
+        Task<List<FitnessPost>> GetFitnessPosts();
         // Save the post
-        Task SaveAsync(Fitness fitnessPost);
+        Task SaveAsync(FitnessPost fitnessPost);
     }
 }
