@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using InstaFit.Data;
+﻿using InstaFit.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -16,7 +12,7 @@ namespace InstaFit
     {
         public IConfiguration Configuration { get; }
 
-        public void ConfigureServices(IConfiguration configuration)
+        public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
         }
@@ -30,17 +26,14 @@ namespace InstaFit
 
 
 
-
-
-
-
-
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
+            app.UseMvc();
+            app.UseStaticFiles();
 
             app.Run(async (context) =>
             {
