@@ -1,4 +1,6 @@
 ﻿using InstaFit.Data;
+using InstaFit.Models.Interfaces;
+using InstaFit.Models.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -22,6 +24,8 @@ namespace InstaFit
             services.AddMvc();
             services.AddDbContext<InstaDbContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddScoped<IFit, FitMangementService>();
         }
 
 

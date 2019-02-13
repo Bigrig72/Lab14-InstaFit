@@ -1,5 +1,6 @@
 ﻿using InstaFit.Data;
 using InstaFit.Models.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,24 +16,39 @@ namespace InstaFit.Models.Services
         {
             _context = context;
         }
-        public Task DeleteAsync(int id)
+        public async Task DeleteAsync(int id)
         {
-         
+            FitnessPost fitnessPost = await _context.FitnessPosts.FindAsync(id);
+            if(fitnessPost != null)
+            {
+                _context.Remove(fitnessPost);
+                await _context.SaveChangesAsync();
+            }
         }
 
-        public Task<FitnessPost> FindFitnessPost(int id)
+        public async Task<FitnessPost> FindFitnessPost(int id)
         {
-            throw new NotImplementedException();
+            FitnessPost fitnessPost = await _context.FitnessPosts.FirstOrDefaultAsync(m => m.ID == id);
+
+            return fitnessPost;
         }
 
         public Task<List<FitnessPost>> GetFitnessPosts()
         {
-            throw new NotImplementedException();
+            return _context.FitnessPosts.ToListAsync();
         }
 
-        public Task SaveAsync(FitnessPost fitnessPost)
+        public async Task SaveAsync(FitnessPost fitnessPost)
         {
-            throw new NotImplementedException();
+        if (await _context.FitnessPosts.FirstOrDefaultAsync(m => m.ID == fitnessPost.ID) == null)
+            {
+                _context.FitnessPosts.Add(fitnessPost);
+            }
+            else
+            {
+                _context.FitnessPosts.Update(fitnessPost);
+            }
+            await _context.SaveChangesAsync();
         }
     }
 }
