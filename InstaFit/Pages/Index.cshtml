@@ -1,0 +1,22 @@
+﻿@page
+@using InstaFit.Models.Interfaces
+
+@inject IFit FitManagementService
+
+@{
+    var fitnessPosts = await FitManagementService.GetFitnessPosts();
+    Layout = "_Layout";
+
+}
+
+
+<h1>This needs to show all posts of the user, should be able to edit each one or delete each one</h1>
+@foreach (var item in fitnessPosts)
+{
+
+    <h2>Image Location:@item.URL</h2>
+    <h2>@item.Location</h2>
+    <h3>@item.Description</h3>
+    //<a asp-page="/FitnessPosts/Index" asp-route-id="@item.ID">@item.Description</a>
+}
+<h3><a asp-page="/FitnessPosts/Manage">ADD NEW FITNE*SS POST</a></h3>

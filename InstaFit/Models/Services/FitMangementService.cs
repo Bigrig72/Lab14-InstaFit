@@ -1,9 +1,7 @@
 ﻿using InstaFit.Data;
 using InstaFit.Models.Interfaces;
 using Microsoft.EntityFrameworkCore;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace InstaFit.Models.Services

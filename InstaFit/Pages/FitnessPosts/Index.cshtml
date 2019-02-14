@@ -1,0 +1,27 @@
+﻿@page "{id}"
+@model InstaFit.Pages.FitnessPosts.IndexModel
+@{
+  
+}
+
+<h1>Index fit post page should be creating an indidual post to add to collection</h1>
+
+<div>
+    <h1>Image needs to show here</h1>
+    <label asp-for="FitnessPost.URL"></label>
+    <label asp-for="FitnessPost.URL">@Model.FitnessPost.URL</label>
+
+</div>
+<div>
+    <label asp-for="FitnessPost.Location"></label>
+    <label asp-for="FitnessPost.Location">@Model.FitnessPost.Location</label>
+
+</div>
+
+<div>
+    <label asp-for="FitnessPost.Description"></label>
+    <label asp-for="FitnessPost.Description">@Model.FitnessPost.Description</label>
+
+    <a asp-page="/FitnessPosts/Manage" asp-route-id="@Model.FitnessPost.ID">EDIT</a>
+
+</div>

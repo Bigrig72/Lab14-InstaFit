@@ -1,0 +1,24 @@
+﻿@page "{id?}"
+@model InstaFit.Pages.FitnessPosts.ManageModel
+@{
+    ViewData["Title"] = "Manage";
+}
+
+<h1>View and Edit a particular post here from the users home index page</h1>
+
+<form method="post">
+
+   <h1>Image will go here or the URL</h1>
+
+    <label asp-for="FitnessPost.Location"></label>
+    <input asp-for="FitnessPost.Location" />
+
+
+    <label asp-for="FitnessPost.Description"></label>
+    <textarea rows="5" asp-for="FitnessPost.Description"></textarea>
+
+
+    <button type="submit">SAVE</button>
+    <button type="submit" asp-page-handler="Delete">DELETE</button>
+</form>
+
