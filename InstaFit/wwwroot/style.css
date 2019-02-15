@@ -1,7 +1,7 @@
-﻿body {
+﻿@import url('https://fonts.googleapis.com/css?family=Montserrat');
+body {
     background-image: url('brick2.jpg');
-    background-size: contain;
-    
+    background-size: contain;    
 }
 
 .footer-bottom {
@@ -36,36 +36,114 @@
     top: 0;
     left: 0;
     right: 0;
-    height: 5vw;
+    height: 7vw;
     border-bottom:1px solid black;
     z-index:50;
 }
 
     .header-top p {
-        font-family: 'Kaushan Script', cursive;
-        font-size:3vw;
+        font-family: 'Kaushan Script', cursive;        
+        font-size: 5vw;
+        text-align: center;
     }
 
-    .instagram-wrap{
-        
+    .instagram-wrap{        
         padding-top: 5vw;
         height: 100%;
-        position: absolute;
+       
         width: 100%;
         top:50px;
-        bottom:0;
-        
-
-
+       /*bottom:0;*/
+  
     }
-    .card{       
-        background:blue;
+    .card{
+       
+        background:white;
         margin: 0 auto;
-        width:500px;
-        height: 500px;
+        width: 60vw;
+        
         border: 1px solid black;
         border-radius: 3px;
+        margin-bottom: 50px;
+        
     }
-       
-    
+.card-header {
+    padding: 15px;
+   
+}
 
+    .profile-img{
+        display: inline-block;
+        background:green;
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        position:relative;
+        top: 3px;
+        margin-right: 5px;
+
+    }
+
+.profile-info {
+    display: inline-block;
+}
+.time {
+    font-size: 12px;
+    float: right;
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    top: 10px;
+    font-weight:bold;
+}
+.location{
+    font-size:12px;
+    color: black;
+}
+.name {
+    background: red;
+    font-size: 14px;
+    color: black;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+}
+.content img{
+    width: 100%;
+
+} 
+.card-footer{
+    box-sizing:border-box;
+    padding:15px;
+    
+}
+.description p {
+    margin: 0;
+    font-size: 14px;
+    padding: 0 0 5px 0;
+}
+.likes{
+    color: coral;
+    font-size:12px;
+    padding-bottom: 15px;
+}
+
+.username {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+.comments p {
+    margin: 0;
+    font-size-14px;
+    padding:0 0 5px 0;
+}
+.toplogo p {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 5vw;
+    color: white;
+}
+.toplogo {
+    margin-top: 10%;
+    text-align: center;
+    text-shadow: 4px 1px black;
+    font-weight: 200;
+}

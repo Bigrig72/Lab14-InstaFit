@@ -8,15 +8,58 @@
     Layout = "_Layout";
 
 }
+<div class="toplogo">
+    <p>
+
+        <span class="headlogo">InstaFit</span> News Feed
+    </p>
+</div>
 
 
-<h1>This needs to show all posts of the user, should be able to edit each one or delete each one</h1>
 @foreach (var item in fitnessPosts)
 {
+    <div class="instagram-wrap">
+        <div class="card">
+            <div class="card-header">
+                <div class="profile-img"></div>
+                <div class="profile-info">
+                    <div class="name">Username</div>
+                    <div class="location">@item.Location</div>
+                </div>
+                <div class="time">
+                    1hr
+                </div>
+                <div class="content">
+                    <img src="~/Images/crossfit1.jpg" />
+                </div>
+                <div class="card-footer">
+                    <div class="likes">
+                        45 likes
+                    </div>
+                    <div class="description">
+                        <p>
+                            <span class="username">Username</span> @item.Description
+                        </p>
+                    </div>
+                    <div class="comments">
+                        <p>
+                            <span class="username">Danny32: </span>What was your workout!!??
+                        </p>
+                        <p>
+                            <span class="username">BigRig722: </span> I love the Form!!
+                        </p>
+                    </div>
+                    <div class="form">
 
-    <h2>Image Location:@item.URL</h2>
-    <h2>@item.Location</h2>
-    <h3>@item.Description</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+  
     //<a asp-page="/FitnessPosts/Index" asp-route-id="@item.ID">@item.Description</a>
 }
-<h3><a asp-page="/FitnessPosts/Manage">ADD NEW FITNE*SS POST</a></h3>
+
+<h3><a asp-page="/FitnessPosts/Manage">ADD NEW FITNESS POST</a></h3>
