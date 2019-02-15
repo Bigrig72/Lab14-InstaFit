@@ -50,6 +50,7 @@
                         </p>
                     </div>
                     <div class="form">
+                        <a asp-page="/FitnessPosts/Index" asp-route-id="@item.ID">Edit Post</a>
 
                     </div>
                 </div>
@@ -59,7 +60,6 @@
 
     
   
-    //<a asp-page="/FitnessPosts/Index" asp-route-id="@item.ID">@item.Description</a>
 }
 
-<h3><a asp-page="/FitnessPosts/Manage">ADD NEW FITNESS POST</a></h3>
+<a asp-page="/FitnessPosts/Manage">CREATE NEW POST</a>

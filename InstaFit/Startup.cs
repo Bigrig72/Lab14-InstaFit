@@ -23,7 +23,7 @@ namespace InstaFit
         {
             services.AddMvc();
             services.AddDbContext<InstaDbContext>(options =>
-            options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            options.UseSqlServer(Configuration["ConnectionStrings:ProductionConnection"]));
 
             services.AddScoped<IFit, FitMangementService>();
         }
