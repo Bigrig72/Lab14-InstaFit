@@ -4,25 +4,32 @@
     Layout = "_Layout";
 
 }
+<div class="jumbotron">
+    <h1 class="display-4">Hello, world!</h1>
+    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+    <hr class="my-4">
+    <div>
+        <h1>Image needs to show here</h1>
+        <label asp-for="FitnessPost.URL"></label>
+        <label asp-for="FitnessPost.URL">@Model.FitnessPost.URL</label>
 
-<h1>Index fit post page should be creating an individual post to add to collection</h1>
+    </div>
+    <div>
+        <label asp-for="FitnessPost.Location"></label>
+        <label asp-for="FitnessPost.Location">@Model.FitnessPost.Location</label>
 
-<div>
-    <h1>Image needs to show here</h1>
-    <label asp-for="FitnessPost.URL"></label>
-    <label asp-for="FitnessPost.URL">@Model.FitnessPost.URL</label>
+    </div>
+    <div>
+        <label asp-for="FitnessPost.Description"></label>
+        <label asp-for="FitnessPost.Description">@Model.FitnessPost.Description</label>
 
+        < asp-route-id="@Model.FitnessPost.ID">EDIT</a>
+
+    </div>
+ 
+    <a  asp-page="/FitnessPosts/Manage"class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
 </div>
-<div>
-    <label asp-for="FitnessPost.Location"></label>
-    <label asp-for="FitnessPost.Location">@Model.FitnessPost.Location</label>
 
-</div>
 
-<div>
-    <label asp-for="FitnessPost.Description"></label>
-    <label asp-for="FitnessPost.Description">@Model.FitnessPost.Description</label>
 
-    <a asp-page="/FitnessPosts/Manage" asp-route-id="@Model.FitnessPost.ID">EDIT</a>
 
-</div>
