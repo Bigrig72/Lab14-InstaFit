@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.329
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InstaFit", "InstaFit\InstaFit.csproj", "{2313C99B-518C-4640-A088-87EF89BEAFF7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InstaFitTests", "InstaFitTests\InstaFitTests.csproj", "{F237773C-ECBF-47A1-A9C2-29C205CB74D9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{2313C99B-518C-4640-A088-87EF89BEAFF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2313C99B-518C-4640-A088-87EF89BEAFF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2313C99B-518C-4640-A088-87EF89BEAFF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F237773C-ECBF-47A1-A9C2-29C205CB74D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F237773C-ECBF-47A1-A9C2-29C205CB74D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F237773C-ECBF-47A1-A9C2-29C205CB74D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F237773C-ECBF-47A1-A9C2-29C205CB74D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
