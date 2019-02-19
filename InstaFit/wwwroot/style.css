@@ -90,7 +90,7 @@ body {
 .time {
     font-size: 12px;
     float: right;
-    display: inline-block;
+    /*display: inline-block;*/
     font-family: 'Montserrat', sans-serif;
     position: relative;
     top: 10px;
@@ -133,7 +133,7 @@ body {
 }
 .comments p {
     margin: 0;
-    font-size-14px;
+    font-size:14px;
     padding:0 0 5px 0;
 }
 .toplogo p {
@@ -146,4 +146,16 @@ body {
     text-align: center;
     text-shadow: 4px 1px black;
     font-weight: 200;
+}
+
+@media (min-width: 576px){
+.jumbotron 
+    {
+    margin: 20vw;
+
+    }
+}
+
+.profile-img img {
+   
 }

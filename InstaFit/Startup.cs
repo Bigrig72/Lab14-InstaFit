@@ -18,7 +18,8 @@ namespace InstaFit
         {
             var builder = new ConfigurationBuilder().AddEnvironmentVariables();
             builder.AddUserSecrets<Startup>();
-            Configuration = builder.Build();
+
+            Configuration =  builder.Build();
 
         }
 
@@ -26,7 +27,7 @@ namespace InstaFit
         {
             services.AddMvc();
             services.AddDbContext<InstaDbContext>(options =>
-            options.UseSqlServer(Configuration["ConnectionStrings:ProductionConnection"]));
+            options.UseSqlServer(Configuration["ConnectionStrings:DefaultConnection"]));
 
             services.AddScoped<IFit, FitMangementService>();
         }
