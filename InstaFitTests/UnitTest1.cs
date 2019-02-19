@@ -92,10 +92,42 @@ namespace InstaFitTests
                 await context.FitnessPosts.AddAsync(post);
                 await context.FitnessPosts.AddAsync(post2);
                 await context.SaveChangesAsync();
-
+               
                 List<FitnessPost> find = await fitService.GetFitnessPosts();             
                 
                 Assert.Equal(2, find.Count);       
+
+            }
+        }
+        [Fact]
+        public async void CanSavePosts()
+        {
+            DbContextOptions<InstaDbContext> options =
+                new DbContextOptionsBuilder<InstaDbContext>
+                ().UseInMemoryDatabase("SavePosts").Options;
+
+            using (InstaDbContext context = new InstaDbContext(options))
+            {
+                FitnessPost post = new FitnessPost();
+                post.ID = 1;
+                post.Location = "Golds Gym";
+                post.URL = "crimson.jpeg";
+                post.Description = "Doing my best to stay fit";
+
+                FitnessPost post2 = new FitnessPost();
+                post2.ID = 2;
+                post2.Location = "Anytime fitness";
+                post2.URL = "packer.jpeg";
+                post2.Description = "Loving life";
+
+                FitMangementService fitService = new FitMangementService(context);
+                await context.FitnessPosts.AddAsync(post);
+                await context.FitnessPosts.AddAsync(post2);
+                await context.SaveChangesAsync();
+
+                List<FitnessPost> find = await fitService.GetFitnessPosts();
+
+                Assert.Equal(1, post.ID);
 
             }
         }
