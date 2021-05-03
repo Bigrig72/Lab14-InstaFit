@@ -1,5 +1,5 @@
 Current azure link not showing images from blob, but shows locally??http://instafit.azurewebsites.net/
-# Lab14-InstaFit
+# InstaFit
 .Net project replicating instagram- with razor
 
 ## Introduction to the app
